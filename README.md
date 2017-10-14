@@ -1,2 +1,2 @@
-# process_kill
-process kill is a specification to kill system processes with multiple signals and intervals
+# ProcessKill
+ProcessKill is a specification to kill running software processes with multiple signals and intervals
