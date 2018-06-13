@@ -1,7 +1,5 @@
 # ProcessKill
-ProcessKill is a specification to sent signal to running software processes in different ways.
-
-One obvious use case is to terminate processes gracefully, if failed, then forcefully kill them.
+ProcessKill is a specification to terminate running software processes with multiple different attempts.
 
 Example:
 
@@ -9,6 +7,7 @@ Example:
 2. If the previous attempts failed, send `TERM` signal 5 times, one right after another
 3. If the previous attempts failed, sent `KILL` signal 3 times, at intervals of 5 seconds in between
 
+ProcessKill plan in YAML format:
 ```yaml
 ---
 - signal: QUIT
@@ -25,3 +24,7 @@ Example:
   max_retry: 3
   interval: 5
 ```
+
+Implementations:
+
+* Ruby https://github.com/liuming/process_kill_rb
